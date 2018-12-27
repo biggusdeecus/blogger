@@ -1,7 +1,7 @@
 <h1><%= @article.title %></h1>
 <p><%= @article.body %><p><br /><br />
 
-<h2>COMMENTS</h2>
+<h2><%= @article.comments.count %> COMMENT/S.</h2>
 <%= render partial: 'articles/comment', collection: @article.comments %>
 <%= render partial: 'comments/form' %>
 
