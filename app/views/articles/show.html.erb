@@ -5,6 +5,12 @@
     <%= link_to tag.name, tag_path(tag) %>
   <% end %>
 </p>
+<br />
+
+<% if @article.image.exists? %>
+  <p><%= image_tag @article.image.url(:medium) %></p>
+<% end %>
+
 <p><%= @article.body %><p><br /><br />
 
 <h2><%= @article.comments.count %> COMMENT/S.</h2>
